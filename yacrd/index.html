@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>Yet Another Bioinformatic blog</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/cayman.css">
+    <link rel="stylesheet" href="/add.css">
+
+    <!-- font -->
+    <link rel="stylesheet" href="/fonts/fork_awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/academicons/css/academicons.min.css">
+    
+    <!-- js -->
+
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;blog.pierre.marijon.fr&#x2F;rss.xml">
+    
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'>  
+</script>
+
+<script>
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+	inlineMath: [['$', '$']],
+	displayMath: [['$$', '$$'],['\\[','\\]']],
+	processEscapes: true,
+	skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+    TeX: {
+	equationNumbers: { autoNumber: "AMS" },
+	extensions: ["AMSmath.js", "AMSsymbols.js","AMScd.js"],
+	TagSide: "left",
+	Macros: {
+	    field: ['\\mathbb{#1}', 1],
+	    C: ['\\field{C}'],
+	    F: ['\\field{F}'],
+	    N: ['\\field{N}'],
+	    Q: ['\\field{Q}'],
+	    R: ['\\field{R}'],
+	    Z: ['\\field{Z}'],
+
+	    zeros: ['\\mathbf{0}'],
+	    ud: ['\\,\\mathrm{d}'],
+
+	    vect:['\\boldsymbol{\\mathbf{#1}}',1],
+	    abs: ['\\lvert#1\\rvert', 1],
+	    abslr:['\\left\\lvert#1\\right\\rvert', 1],
+	    norm: ['\\lVert#1\\rVert', 1],
+	    normlr: ['\\left\\lVert#1\\right\\rVert', 1],
+
+	    lcm: ['\\mathop{\\mathrm{lcm}}'],
+	    interior: ['\\mathop{\\mathrm{int}}'],
+	    exterior: ['\\mathop{\\mathrm{ext}}'],
+	    volume: ['\\mathop{\\mathrm{vol}}'],
+
+	    E: ['{\\rm I\\kern-.3em E}'],
+	    Var: ['\\mathop{\\mathrm{Var}}'],
+	    Cov: ['\\mathop{\\mathrm{Cov}}'],
+	    Binom: ['\\mathop{\\mathrm{Binom}}'],
+	    Exp: ['\\mathop{\\mathrm{Exp}}'],
+	    Poi: ['\\mathop{\\mathrm{Poi}}'],
+
+	    GL: ['\\mathrm{GL}'],
+	    SL: ['\\mathrm{SL}'],
+	    Aut: ['\\mathrm{Aut}'],
+	    ker: ['\\mathrm{ker}'],
+	    id: ['\\mathop{\\mathrm{id}}'],
+
+	    Re: ['\\mathop{\\mathrm{Re}}'],
+	    Im: ['\\mathop{\\mathrm{Im}}'],
+	    Res: ['\\mathop{\\mathrm{Res}}'],
+	}
+    }
+});
+
+
+</script>
+
+    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+<script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//stats.pierre.marijon.fr/tracker.js', 'fathom');
+fathom('set', 'siteId', 'NYKUR');
+fathom('trackPageview');
+</script>
+<!-- / Fathom -->
+
+
+
+    
+ <script data-isso="//isso.pierre.marijon.fr/" data-isso-reply-to-self="true" data-isso-require-author="true" data-isso-reveal-on-click="inf" src="https://isso.pierre.marijon.fr/js/embed.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <a href="https://github.com/natir/blog" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#485F41; color:#B6C8B1; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    
+    <section class="page-header">
+      <h1 class="project-name">Yet Another Bioinformatic blog</h1>
+      <a class="btn" href="/">Home</a>
+      <a class="btn" href="//pierre.marijon.fr">About</a>
+      <a class="btn" href="/rss.xml">RSS feed</a>
+    </section>
+
+
+    <section class="main-content">
+      
+  <section class="post">
+    <div class="title-and-info">
+      <h1>Yacrd or the hard way to build a bioinformatics tools</h1>
+      <div class="info">
+    	<span>4 minute read</span>
+    	
+    	<span class='divider'/>
+    	<span>18 June 2018</span>
+    	
+    	
+    	
+      </div>
+    </div>
+    <article>
+      {% include setup %}</p>
+<h1 id="yacrd-or-the-hard-way-to-build-a-bioinformatics-tools">Yacrd: or the hard way to build a bioinformatics tools</h1>
+<p>First how sequencing work (very very rougly) :</p>
+<ol>
+<li>extract DNA</li>
+<li>cut in little fragment</li>
+<li>sequence this fragment</li>
+</ol>
+<p>Sometimes between step 2 and 3 little fragment merged in bigger fragmente, and sequencer generate a chimeric reads.</p>
+<p>Chimeric reads trouble in many type of analysis, in assembly it connects remote regions of the genome, and create mis-assembly. Many tools exist to detect and remove/split this chimeric read.</p>
+<h2 id="why">Why</h2>
+<p>I create Yacrd because I didn't find standalon tools for detect chimeric read in long read dataset without correcte this read. We can mention Dasscruber tools, but they do some other modification on read and bigger problem it's only work with dagliner.</p>
+<h2 id="how">How</h2>
+<p>![Yacrd use long read mapping result to compute coverage of read and find gap in this coverage] ({{ POST_ASSETS_PATH }}/img/algoritm.png)</p>
+<p>We can define YACRD algorithm like :</p>
+<ol>
+<li>parse output of long read mapping</li>
+<li>For each read :
+<ol>
+<li>Compute the coverage curve of this read</li>
+<li>Find where coverage are less than a threshold</li>
+</ol>
+</li>
+</ol>
+<p>The idea is very very simply so I begin to write yacrd in python</p>
+<p>#### Python Version 0.0</p>
+<p>First we need read against read information minimap are pretty effecient tools for that. We can convert minimap output (a tsv with readname and mapping position) in a hashtable they associate read and all interval where they are covered by another read.</p>
+<p>After we construct this table we can iterate over each read, and construct for each read the covered curve, this curve are modelise by a 1D table with size equal to the size of read and for each base a count of coverage level at this position at this end we rescreen the coverage table to found where the coverage drop of a threshold.</p>
+<p>At this point we can observe some case :</p>
+<p>![gap at begin in middle and at end of read huge gap]({{ POST_ASSETS_PATH }}/img/gap_position.png)</p>
+<p>The gap at begin and end are algorithm gap some mapping tools didn't try to extend overlap to the end or begin of ther read, so the position at begin/end of read aren't realy coverage gap.
+I observe some read where they have no overlap or just one or two read I called this read Not_covered if a read have a very small number of overlap this read provide any information or how we can trust in this information.</p>
+<p>This first unpublish prototype work on simple example but on real data we experiment a huge performance issue.</p>
+<h4 id="c-arbok-kabuto">C++ Arbok, Kabuto</h4>
+<p>Python version are slow but they validate the algorithm, so I just rewrite this algorithm in C++, this is the version 0.1 of Yacrd. After some discussion with <a href="https://twitter.com/wDimD">Maël Kerbiriou</a> he rewrite the algorithm.</p>
+<p>Maël replace the huge table of coverage by a priority queue of interval.</p>
+<pre><code>gap_list &lt;- {}
+queue &lt;- {}
+map_interval &lt;- sort of mapping interval
+gap_begin
+for each interval in map_interval:
+    for each i in queue:
+    if i.end &lt; interval.begin:
+        gap_begin = i.end
+        queue.pop(i)
+<pre><code>if length of queue &amp;lt; threshold:
+gap_list.add(gap_begin, intervale.begin)
+
+queue.add(interval)
+</code></pre>
+<p></code></pre></p>
+<p>If we assume the memory alocation are made in $O(1)$. The complexity of naive algorithm are $O(n \dot 2m)$ where m is the mean number of base in read, m the number of read, the complexity of Maël algorithm are near $O(m \dot i)$ where i is the number of mapping interval. Generaly $i &lt;&lt; m$.</p>
+<p>Maël add some C++ triks to read file more efficiently, read her <a href="https://github.com/natir/yacrd/pull/8">pull request</a> it's very intersting.</p>
+<p>Plus/Minus of this version.</p>
+<p>Plus:</p>
+<ul>
+<li>code are speed</li>
+</ul>
+<p>Minus:</p>
+<ul>
+<li>depency management are horrible</li>
+</ul>
+<p>The performance improvement is due to the use of a compiled language but also has improvements in the algorithm. But the evolution of programme are little bit harder specialy when this fonctionality required to add dependency in project.</p>
+<p>If I want continue to add fonctionality in yacrd I need a langage with good performance, an easy dependancy management so I select ~~Go~~ Rust.</p>
+<h4 id="rust-ninetales">Rust Ninetales</h4>
+<p>Ok I just completle rewrite yacrd in Rust, it's was my first Rust application so I loss many time on stupid error and I probably the worst possible code.</p>
+<p>I want to be sure result on real dataset are same between version Kabuto and Ninetales so I reuse <em>E. coli</em> Pacbio dataset from by last <a href="http://blog.pierre.marijon.fr/2018/04/13/long-reads-overlapper-compare#datasets">blog post</a></p>
+<p>Run on result of this command :</p>
+<pre><code>minimap -x ava10k -k 14 e_coli_pacbio.fasta e_coli_pacbio.fasta &gt; minimap_pacbio.paf
+</code></pre>
+<p>e_coli_pacbio.fasta come for <a href="https://github.com/PacificBiosciences/DevNet/wiki/E.-coli-Bacterial-Assembly">DevNet pacbio</a> 589 MB</p>
+<pre><code>/usr/bin/time yacrd0.2.1 -i minimap_pacbio.paf
+18.52 user 0.57 system 19.22 elapsed
+</code></pre>
+<pre><code>/usr/bin/time yacrd0.3 -i minimap_pacbio.paf
+20.09 user 0.62 system 20.88 elapsed
+</code></pre>
+<p>The rust version is slower indeed but the benefits are HUGE:</p>
+<ul>
+<li>simple dependency management</li>
+<li>integrated test framework</li>
+<li>sure not to have a memory leak</li>
+<li>future developments are easier</li>
+<li>I like this language:)</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>it's work</p>
+<p>algo is simple but implementation change many think</p>
+<p>rust better than c++ because code are shorter, and dependancie management is simple</p>
+<p>Ok I plan feature required for version 1.0 in <a href="https://github.com/natir/yacrd/issues/12">this issue</a>, but I'm open to any suggestion.</p>
+<p>And I think that having in addition to the fixed threshold a dynamic threshold based on the reads coverage that shares a similar region with the target reads, would be a good idea.</p>
+<h2 id="thanks">Thanks</h2>
+<p>Mael for the new algorithm, and some c++ tricks</p>
+<p>Rayan Chikhi and Jean Stéphane Varré for correction</p>
+<h2 id="version-naming-convention">Version naming convention</h2>
+<p>Build a string with contributors initial and version number transformed all characters into their base values64, apply a modulo 150 go look for the pokemon pokedex in the pokemon generation according to the major version number 0 generation 1, 1 generation 2, ...
+    </article>
+  </section>
+
+  <h2>Comments:</h2>
+    <section id="isso-thread"></section>
+    
+      <footer class="site-footer">
+	<span class="site-footer-credits">
+	  <center>
+	    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+	    </a>
+	  </center>
+	  <br />
+	  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Yet Another Bioinformatic blog</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pierre Marijon</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href=https:&#x2F;&#x2F;blog.pierre.marijon.fr&#x2F;yacrd&#x2F; rel="dct:source">blog.pierre.marijon.fr</a>.</span>
+      </footer>
+    </section>
+    
+
+    
+<section class="share-page">
+  Share this on &rarr; <br/>
+  <a href="https://twitter.com/intent/tweet?text=Yacrd or the hard way to build a bioinformatics tools&url=https:&#x2F;&#x2F;blog.pierre.marijon.fr&#x2F;yacrd&#x2F;&via=pierre_marijon&related=pierre_marijon" rel="nofollow" target="_blank" title="Share on Twitter">
+    <span class="fa fa-twitter fa-3x"></span>
+  </a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https:&#x2F;&#x2F;blog.pierre.marijon.fr&#x2F;yacrd&#x2F; &title=Yacrd or the hard way to build a bioinformatics tools&source=https:&#x2F;&#x2F;blog.pierre.marijon.fr">
+    <span class="fa fa-linkedin fa-3x"></span>
+  </a>
+</section> 
+
+
+  </body>
+</html>
